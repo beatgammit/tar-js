@@ -7,6 +7,7 @@
 <script src='../lib/utils.js'></script>
 <script src='../lib/header.js'></script>
 <script src='../lib/tar.js'></script>
+<script src='../lib/untar.js'></script>
 
 <script>
 (function () {
@@ -14,19 +15,35 @@
 
 	var Tar = require('tar'),
 		utils = require('utils'),
+		Untar = require('untar'),
 		tape = new Tar(),
 		out,
 		url,
 		base64;
 
+	function uint8ToString(buf) {
+		var i, length, out = '';
+		for (i = 0, length = buf.length; i < length; i += 1) {
+			out += String.fromCharCode(buf[i]);
+		}
+
+		return out;
+	}
+
 	out = tape.append('output.txt', 'This is test1!');
 	out = tape.append('dir/out.txt', 'This is test2! I changed up the directory');
 	out = tape.append('arr.txt', utils.stringToUint8('This is a Uint8Array!'));
 
+	Untar(out, function (header, data) {
+		var contents = uint8ToString(data);
+		console.log(header.fileName, contents);
+	});
+/*
 	base64 = utils.uint8ToBase64(out);
 
 	url = "data:application/tar;base64," + base64;
 	window.open(url);
+*/
 }());
 </script>
 </head>
