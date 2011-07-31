@@ -26,7 +26,7 @@ Usage Guide
 
 In your HTML file, make sure that require-kiss is included first. Then, to use it, do something like this:
 
-    var Tar = require('tar-js'),
+    var Tar = require('tar'),
         tape = new Tar();
 
 Then all you got to do is call `tape.append` with your params and it'll be added to the archive. That's it!
