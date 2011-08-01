@@ -1,7 +1,7 @@
 {
   "name": "tar-js",
   "description": "Tar implemented in the browser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://github.com/beatgammit/tar-js",
   "repository": {
     "type": "git",

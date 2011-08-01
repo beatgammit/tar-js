@@ -38,8 +38,9 @@
 		var contents = uint8ToString(data);
 		console.log(header.fileName, contents);
 	});
+
 /*
-	base64 = utils.uint8ToBase64(out);
+	base64 = btoa(uint8ToString(out));
 
 	url = "data:application/tar;base64," + base64;
 	window.open(url);
