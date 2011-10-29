@@ -17,14 +17,14 @@ Dependencies
 
 Tar needs an HTML5 compliant browser. More specifically it needs `Uint8Array` to work.
 
-The only external module is require-kiss, which makes browser JS much more Node-like.
+The examples depend on pakmanager, a package manager for the browser to make code written for node run in the browser.  Install it as such:
 
-This module can be installed from npm (`npm install require-kiss`) or directly downloaded from github (https://github.com/coolaj86/require-kiss-js).
+`pakmanager build`
 
 Usage Guide
 ===========
 
-In your HTML file, make sure that require-kiss is included first. Then, to use it, do something like this:
+The easiest way to interface with it is by using pakmanager. Include the package from pakmanager in your html, and then in you javascript:
 
     var Tar = require('tar'),
         tape = new Tar();
