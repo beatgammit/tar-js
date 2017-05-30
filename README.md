@@ -26,8 +26,22 @@ Usage Guide
 
 The easiest way to interface with it is by using pakmanager. Include the package from pakmanager in your html, and then in you javascript:
 
-    var Tar = require('tar'),
-        tape = new Tar();
+```javascript
+const Tar = require('tar');
+const tape = new Tar();
+```
+
+Or require script from unpkg.com cdn inside of your html page:
+
+```html
+<script src="https://unpkg.com/tar-js@0.2.1/dist/tar.min.js"></script>
+```
+
+and use:
+
+```javascript
+var tape = new Tar();
+```
 
 Then all you got to do is call `tape.append` with your params and it'll be added to the archive. That's it!
 
