@@ -9,10 +9,23 @@
   },
   "author": "T. Jameson Little <t.jameson.little@gmail.com>",
   "main": "lib/tar.js",
-  "keywords": ["tar", "browser", "client", "offline"],
+  "keywords": [
+    "tar",
+    "browser",
+    "client",
+    "offline"
+  ],
   "directories": {
     "lib": "lib"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "npm run build:dev && npm run build:prod",
+    "build:dev": "webpack",
+    "build:prod": "NODE_ENV=production webpack"
   }
 }
