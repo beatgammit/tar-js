@@ -9,6 +9,7 @@
   },
   "author": "T. Jameson Little <t.jameson.little@gmail.com>",
   "main": "lib/tar.js",
+  "types": "lib/tar.d.ts",
   "keywords": ["tar", "browser", "client", "offline"],
   "directories": {
     "lib": "lib"
